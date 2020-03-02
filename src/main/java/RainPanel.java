@@ -21,17 +21,20 @@ public class RainPanel extends JPanel {
 	private ArrayList<Drop> dropV;
 	private UpdateThread mUpdateThread;
 
-	public RainPanel(String imageScenePath) {
+	public RainPanel() {
 	    rainV = new ArrayList<>();
 	    dropV = new ArrayList<>();
 //		this.setBackground(new Color(0,0,0,0));
-		this.imageScenePath = imageScenePath;
+//		this.imageScenePath = imageScenePath;
 		mUpdateThread=new UpdateThread();
 	    mUpdateThread.start();
 	}
 
 	public void stop() {
 	    mUpdateThread.stopped=true;
+	}
+	public boolean isStopped() {
+		return mUpdateThread.stopped;
 	}
 
 	public int getHeight() {
