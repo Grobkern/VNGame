@@ -24,8 +24,6 @@ public class RainPanel extends JPanel {
 	public RainPanel() {
 	    rainV = new ArrayList<>();
 	    dropV = new ArrayList<>();
-//		this.setBackground(new Color(0,0,0,0));
-//		this.imageScenePath = imageScenePath;
 		mUpdateThread=new UpdateThread();
 	    mUpdateThread.start();
 	}
@@ -33,6 +31,7 @@ public class RainPanel extends JPanel {
 	public void stop() {
 	    mUpdateThread.stopped=true;
 	}
+
 	public boolean isStopped() {
 		return mUpdateThread.stopped;
 	}

@@ -18,12 +18,13 @@ public class Sound {
 	private InputStream musicPath;
 	boolean isPlaying = false;
 	boolean isCreated = false; // Не самая важная переменная, но я же пишу на жабе, так что наплевать, ХА!
-	File file = new File("jopa.wav");
+	private File file = new File("test.wav");
+	private Clip clip = null;
+
 	public Sound(InputStream musicPath) {
 		this.musicPath = musicPath;
 	}
-	public Clip clip = null;
-	
+
 	public void createSound() {
 		isCreated = true;
 		try {
@@ -31,9 +32,7 @@ public class Sound {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 		isPlaying = false; // Почему?
-//		File file = new File(String.valueOf(musicPath));
 		try {
 			AudioInputStream ais = AudioSystem.getAudioInputStream(file);
 			clip = AudioSystem.getClip();
@@ -80,8 +79,8 @@ public class Sound {
 	}
 
 	public File copyInputStreamToFile(InputStream inputStream) throws IOException { // Метод отвечающий за запись InputStream в File. Публичный, так как используется не только здесь
-		//TODO можно переписать, а то выглядит как костыль какой-то
-		File file = new File("test.wav");
+		//TODO: можно переписать, а то выглядит как костыль какой-то
+		File file = new File("test.kern");
 		try (FileOutputStream outputStream = new FileOutputStream(file)) {
 			int read;
 			byte[] bytes = new byte[1024];

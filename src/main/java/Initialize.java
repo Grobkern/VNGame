@@ -8,11 +8,19 @@ import java.io.InputStream;
 import java.net.URL;
 
 public class Initialize {
+	/**
+	 * Главный класс, в котором происходит инициализация, и запуск основных методов
+	 * */
 	static JFrame jframe = null;
 	static SceneClass currentScene = null;
+	static ImageIcon imageIcon = null;
+//	static InputStream inputStream = null;
+	static File imageScene = null;
+	static URL iconURL = null;
+
 
 	private static Dimension getWindowSize() { //Получить стандартный размер окна в соотношении 16:9, чтобы изображения выглядели нормально
-		//TODO пофиксить метод(Почему-то не рабоатет?!?!?!)
+		//TODO: пофиксить метод(Почему-то не рабоатет?!?!?!)
 		int windowWidth = 1920;
 		int windowHeight = 1080;
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -27,34 +35,34 @@ public class Initialize {
 			
 	}
 	
-	private static void createGUI() { // Создание окна для отрисовки на нём изображений
-		//TODO упростить
-		JPanel panel = new JPanel();
-		panel.setLayout(new BorderLayout());
-		jframe = new JFrame("ValueDataLog");
-		URL iconURL = Initialize.class.getResource("icon.png");
-		System.out.println(iconURL.getPath());
-		ImageIcon imageIcon = new ImageIcon(iconURL);
-		jframe.setIconImage(imageIcon.getImage());
-		currentScene = new SceneClass(jframe);
-		jframe.addWindowListener(new WindowAdapter() { // Event на уничтожение окна(закрытие)
-			@Override
-			public void windowClosed(WindowEvent e) {
-				currentScene.WindowDestroyed();
-
-			}
-		});
-		InputStream inputStream = Initialize.class.getResourceAsStream("cb2.jpg");
-		File file = new File("");
-		try {
-			file = new Sound(inputStream).copyInputStreamToFile(inputStream);
-		} catch (IOException e){
-			e.printStackTrace();
+	private static void setupJFrame(){
+		if(jframe != null) {
+			jframe.addWindowListener(new WindowAdapter() { // Event на уничтожение окна(закрытие)
+				@Override
+				public void windowClosed(WindowEvent e) {
+					if (currentScene != null) {
+						currentScene.WindowDestroyed();
+					}
+				}
+			});
+			jframe.setPreferredSize(getWindowSize());
+			jframe.pack();
 		}
-		currentScene.loadScene(file.getName());//TODO Переделать нормально, путём переписывания конструктора класса SceneClass(выглядит позорно)
-		jframe.setPreferredSize(new Dimension(1080,1920));
+	}
+
+	private static void createGUI() { // Создание окна для отрисовки на нём изображений
+		jframe = new JFrame("CBEVN");
+		setupJFrame();
+		currentScene = new SceneClass((jframe != null) ? jframe : new JFrame("CBEVN"));
+		imageScene = new File(Initialize.class.getResource("/assets/pictures/cb2.jpg").getFile());
+		System.out.println(imageScene.getName());
+		currentScene.loadScene(imageScene);//TODO: Переделать нормально, путём переписывания конструктора класса SceneClass(выглядит позорно)
+		iconURL = Initialize.class.getResource("/assets/pictures/icon.png");
+		imageIcon = new ImageIcon(iconURL);
+		jframe.setIconImage(imageIcon.getImage());
 		jframe.setVisible(true);
 	}
+
 	public static void main(String[] args) {
 		createGUI();
 	}

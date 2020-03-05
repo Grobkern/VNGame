@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc1ddd62-515c-4952-bff9-9337850bb8f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cb2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ntpp.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/witchertac.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/KernuxSL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CBEVN.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Initialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Initialize.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RainPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SceneClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SceneClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SceneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/pictures/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ntpp.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/music/ntpp.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Initialize.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Initialize.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/RainPanel$Drop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RainPanel$Drop.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/RainPanel$Rain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RainPanel$Rain.class" afterDir="false" />
@@ -22,45 +23,283 @@
       <change beforePath="$PROJECT_DIR$/target/classes/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SceneController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Sound.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sound.class" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/.idea/shelf/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/CBEVN$Initialize.ic" NAME="Initialize Coverage Results" MODIFIED="1583427154079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="ErrorTreeViewConfiguration">
     <option name="autoscrollToSource" value="true" />
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1588006119">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.44" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="4908" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="4908" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="CBEVN" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Initialize.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="58" column="83" selection-start-line="58" selection-start-column="83" selection-end-line="58" selection-end-column="83" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/KernuxSL.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#284#300#0" expanded="true" />
+                <element signature="e#368#384#0" expanded="true" />
+                <element signature="e#452#467#0" expanded="true" />
+                <element signature="e#847#848#0" expanded="true" />
+                <element signature="e#897#898#0" expanded="true" />
+                <element signature="e#950#951#0" expanded="true" />
+                <element signature="e#1007#1008#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Sound.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SceneClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/Initialize.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Sound.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SceneClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/KernuxSL.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="IgnfkgfF" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="342" />
+    <option name="width" value="1400" />
+    <option name="height" value="1033" />
+  </component>
   <component name="ProjectId" id="1YUlPAplsA6Y6l5l6QQ8jccdkzj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CBEVN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CBEVN" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CBEVN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CBEVN" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CBEVN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CBEVN" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CBEVN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CBEVN" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CBEVN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CBEVN" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CBEVN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CBEVN" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CBEVN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CBEVN" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CBEVN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CBEVN" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="pictures" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583432200366" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/music" />
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/music/" />
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/pictures" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="Initialize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -94,70 +333,177 @@
       <workItem from="1583009174869" duration="17000" />
       <workItem from="1583161341426" duration="13000" />
       <workItem from="1583161495389" duration="1856000" />
-      <workItem from="1583163387922" duration="7537000" />
+      <workItem from="1583163387922" duration="8151000" />
+      <workItem from="1583175160701" duration="4324000" />
+      <workItem from="1583252040504" duration="1316000" />
+      <workItem from="1583253411969" duration="10658000" />
+      <workItem from="1583416866585" duration="10000" />
+      <workItem from="1583417409998" duration="1642000" />
+      <workItem from="1583426019574" duration="1790000" />
+      <workItem from="1583428098633" duration="3968000" />
     </task>
+    <task id="LOCAL-00001" summary="Доработал и прооптимизировал код, нарисовал иконку, и добавил обоину :D">
+      <created>1583173364348</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583173364348</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Доработал и прооптимизировал код, нарисовал иконку, и добавил обоину :D">
+      <created>1583173435591</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583173435591</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Доработал и прооптимизировал код, нарисовал иконку, и добавил обоину :D">
+      <created>1583173449923</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583173449923</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="5758000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1035" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18249734" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info auto_hide="true" id="Learn" internal_type="SLIDING" order="7" show_stripe_button="false" type="SLIDING" weight="0.3293944" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289183" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289183" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3289183" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32977587" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Доработал и прооптимизировал код, нарисовал иконку, и добавил обоину :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="Доработал и прооптимизировал код, нарисовал иконку, и добавил обоину :D" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="179" key="#Notifications" timestamp="1583005176125">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
     <state x="560" y="179" key="#Notifications/0.0.1920.1035@0.0.1920.1035" timestamp="1583005176125" />
-    <state x="773" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1583172247919">
+    <state x="773" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1583255478728">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state x="773" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1035@0.0.1920.1035" timestamp="1583172247919" />
-    <state x="698" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583172987340">
+    <state x="773" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1035@0.0.1920.1035" timestamp="1583255478728" />
+    <state x="698" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583258985443">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state x="698" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1035@0.0.1920.1035" timestamp="1583172987340" />
-    <state x="431" y="104" key="CommitChangelistDialog2" timestamp="1583173435410">
+    <state x="698" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1035@0.0.1920.1035" timestamp="1583258985443" />
+    <state x="431" y="104" key="CommitChangelistDialog2" timestamp="1583173449838">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state x="431" y="104" key="CommitChangelistDialog2/0.0.1920.1035@0.0.1920.1035" timestamp="1583173435410" />
-    <state x="835" y="179" key="FileChooserDialogImpl" timestamp="1583005328995">
+    <state x="431" y="104" key="CommitChangelistDialog2/0.0.1920.1035@0.0.1920.1035" timestamp="1583173449838" />
+    <state x="480" y="195" key="DetectedRootsChooserDialog" timestamp="1583256942131">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state x="835" y="179" key="FileChooserDialogImpl/0.0.1920.1035@0.0.1920.1035" timestamp="1583005328995" />
-    <state width="1878" height="236" key="GridCell.Tab.0.bottom" timestamp="1583173059689">
+    <state x="480" y="195" key="DetectedRootsChooserDialog/0.0.1920.1035@0.0.1920.1035" timestamp="1583256942131" />
+    <state x="835" y="179" key="FileChooserDialogImpl" timestamp="1583256937141">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1878" height="236" key="GridCell.Tab.0.bottom/0.0.1920.1035@0.0.1920.1035" timestamp="1583173059689" />
-    <state width="1878" height="236" key="GridCell.Tab.0.center" timestamp="1583173059689">
+    <state x="835" y="179" key="FileChooserDialogImpl/0.0.1920.1035@0.0.1920.1035" timestamp="1583256937141" />
+    <state width="1878" height="238" key="GridCell.Tab.0.bottom" timestamp="1583417806762">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1878" height="236" key="GridCell.Tab.0.center/0.0.1920.1035@0.0.1920.1035" timestamp="1583173059689" />
-    <state width="1878" height="236" key="GridCell.Tab.0.left" timestamp="1583173059689">
+    <state width="1878" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1035@0.0.1920.1035" timestamp="1583417806762" />
+    <state width="1878" height="238" key="GridCell.Tab.0.center" timestamp="1583417806761">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1878" height="236" key="GridCell.Tab.0.left/0.0.1920.1035@0.0.1920.1035" timestamp="1583173059689" />
-    <state width="1878" height="236" key="GridCell.Tab.0.right" timestamp="1583173059689">
+    <state width="1878" height="238" key="GridCell.Tab.0.center/0.0.1920.1035@0.0.1920.1035" timestamp="1583417806761" />
+    <state width="1878" height="238" key="GridCell.Tab.0.left" timestamp="1583417806759">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state width="1878" height="236" key="GridCell.Tab.0.right/0.0.1920.1035@0.0.1920.1035" timestamp="1583173059689" />
-    <state x="406" y="169" key="SettingsEditor" timestamp="1583164883390">
+    <state width="1878" height="238" key="GridCell.Tab.0.left/0.0.1920.1035@0.0.1920.1035" timestamp="1583417806759" />
+    <state width="1878" height="238" key="GridCell.Tab.0.right" timestamp="1583417806762">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state x="406" y="169" key="SettingsEditor/0.0.1920.1035@0.0.1920.1035" timestamp="1583164883390" />
+    <state width="1878" height="238" key="GridCell.Tab.0.right/0.0.1920.1035@0.0.1920.1035" timestamp="1583417806762" />
+    <state width="1878" height="337" key="GridCell.Tab.1.bottom" timestamp="1583264576124">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state width="1878" height="337" key="GridCell.Tab.1.bottom/0.0.1920.1035@0.0.1920.1035" timestamp="1583264576124" />
+    <state width="1878" height="337" key="GridCell.Tab.1.center" timestamp="1583264576123">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state width="1878" height="337" key="GridCell.Tab.1.center/0.0.1920.1035@0.0.1920.1035" timestamp="1583264576123" />
+    <state width="1878" height="337" key="GridCell.Tab.1.left" timestamp="1583264576123">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state width="1878" height="337" key="GridCell.Tab.1.left/0.0.1920.1035@0.0.1920.1035" timestamp="1583264576123" />
+    <state width="1878" height="337" key="GridCell.Tab.1.right" timestamp="1583264576123">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state width="1878" height="337" key="GridCell.Tab.1.right/0.0.1920.1035@0.0.1920.1035" timestamp="1583264576123" />
+    <state x="501" y="169" width="924" height="683" key="Maven.ArtifactSearchDialog" timestamp="1583256018202">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state x="501" y="169" width="924" height="683" key="Maven.ArtifactSearchDialog/0.0.1920.1035@0.0.1920.1035" timestamp="1583256018202" />
+    <state x="258" y="55" key="SettingsEditor" timestamp="1583258976859">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state x="258" y="55" key="SettingsEditor/0.0.1920.1035@0.0.1920.1035" timestamp="1583258976859" />
     <state x="689" y="252" width="540" height="540" key="StructurePopup" timestamp="1583007524577">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
     <state x="689" y="252" width="540" height="540" key="StructurePopup/0.0.1920.1035@0.0.1920.1035" timestamp="1583007524577" />
-    <state x="367" y="298" key="com.intellij.ide.util.TipDialog" timestamp="1583163401555">
+    <state x="498" y="251" key="com.intellij.ide.util.TipDialog" timestamp="1583417408926">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state x="367" y="298" key="com.intellij.ide.util.TipDialog/0.0.1920.1035@0.0.1920.1035" timestamp="1583163401555" />
+    <state x="498" y="251" key="com.intellij.ide.util.TipDialog/0.0.1920.1035@0.0.1920.1035" timestamp="1583417408926" />
+    <state x="382" y="242" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1583256100546">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state x="382" y="242" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1035@0.0.1920.1035" timestamp="1583256100546" />
     <state x="708" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583173442237">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
     <state x="708" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1035@0.0.1920.1035" timestamp="1583173442237" />
-    <state x="100" y="100" width="1720" height="835" key="dock-window-1" timestamp="1583163044229">
+    <state x="487" y="247" width="945" height="599" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1583263823235">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state x="100" y="100" width="1720" height="835" key="dock-window-1/0.0.1920.1035@0.0.1920.1035" timestamp="1583163044229" />
+    <state x="487" y="247" width="945" height="599" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1035@0.0.1920.1035" timestamp="1583263823235" />
+    <state x="100" y="100" width="1720" height="835" key="dock-window-1" timestamp="1583177185327">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state x="100" y="100" width="1720" height="835" key="dock-window-1/0.0.1920.1035@0.0.1920.1035" timestamp="1583177185327" />
     <state x="100" y="100" width="1720" height="835" key="dock-window-2" timestamp="1583163044229">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
@@ -166,6 +512,10 @@
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
     <state x="-157" y="267" width="1720" height="835" key="dock-window-3/0.0.1920.1035@0.0.1920.1035" timestamp="1583163044229" />
+    <state x="519" y="67" width="881" height="900" key="find.popup" timestamp="1583263422280">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state x="519" y="67" width="881" height="900" key="find.popup/0.0.1920.1035@0.0.1920.1035" timestamp="1583263422280" />
     <state x="697" y="270" width="710" height="302" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1583005339387">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
@@ -174,9 +524,144 @@
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
     <state x="710" y="144" key="refactoring.ChangeSignatureDialog/0.0.1920.1035@0.0.1920.1035" timestamp="1583165273044" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1583166973554">
+    <state x="624" y="236" key="run.anything.popup" timestamp="1583263801249">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1035@0.0.1920.1035" timestamp="1583166973554" />
+    <state x="624" y="236" key="run.anything.popup/0.0.1920.1035@0.0.1920.1035" timestamp="1583263801249" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1583258257803">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1035@0.0.1920.1035" timestamp="1583258257803" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/SL.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Sound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SceneClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Initialize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="58" column="83" selection-start-line="58" selection-start-column="83" selection-end-line="58" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/KernuxSL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#284#300#0" expanded="true" />
+            <element signature="e#368#384#0" expanded="true" />
+            <element signature="e#452#467#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>CBEVN</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>13</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

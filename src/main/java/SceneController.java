@@ -1,21 +1,21 @@
 import javax.swing.*;
-import java.util.HashMap;
-import java.util.Map;
 
 public class SceneController {
 	/**
 	 * Один, чтобы управлять ими всеми
 	 * Контроллер всех сцен
 	 * */
-	String sceneName = "";
-	JFrame jframe = null;
+	String sceneName;
+	JFrame jframe;
+
 	public SceneController(String sceneName, JFrame jframe) { //Конструктор класса контроллера сцены, принимает имя сцены
 		this.sceneName = sceneName;
 		this.jframe = jframe;
 	}
+
 	public void getInfoAboutObjectScene() {
 		switch (sceneName) {
-			//TODO Что за херня ниже!?!?!?
+			//TODO: Что за херня ниже!?!?!?
 			case "cbWallpaper.jpg":
 				loadScene(sceneName);
 				break;
@@ -28,13 +28,13 @@ public class SceneController {
 	}
 
 	private void loadPerson(String sceneName) { //Подгрузка персонажа на объект класса JFrame
-		if(jframe!=null) {
+		if(jframe != null) {
 			return;
 		}
 	}
 
 	private void loadScene(String sceneName) { //Метод для подгрузки сцены на объект класса JFrame
-		if(jframe!=null) {
+		if(jframe != null) {
 			return;
 		}
 		return;
