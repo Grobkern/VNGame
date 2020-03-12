@@ -1,15 +1,18 @@
+package Media;
+import CustomPanels.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 
 public class SceneClass {
 	//TODO: переписать логику класса на использование вместо пути(строки) - файла
 	//TODO: Вообще убрать логику и пренести её в SceneController(ЗАЧЕМ?!?!)
 	//TODO: Добавить метод создания и подгрузки персонажа(Почему сразу не сделал?)
-	//TODO: Разобраться куда делась вся опертива?!!?!
+	//TODO: Разобраться куда делась вся опертива?!!?!(Не буду(1.5 гб  норм для одной фотки и одной песенки:D))
 	/**
 	 * Класс, отвечающий за взаимодействие со ценой(а.к.а картинка, персонаж и песня)
 	 * */
@@ -23,6 +26,7 @@ public class SceneClass {
 	public static final String ANSI_PURPLE = "\u001B[35m";
 	public static final String ANSI_CYAN = "\u001B[36m";
 	public static final String ANSI_WHITE = "\u001B[37m";
+	Font customFont = null;
 	JFrame jframe;
 	JLabel background;
 	JLabel jbutton;
@@ -35,8 +39,11 @@ public class SceneClass {
 		this.jframe = jframe;
 	}
 
+	private boolean isCustomFont() {
+		return customFont == null ? true : false;
+	}
 
-	private void loadSceneFiles(String imageScenePath, String musicScenePath) { //TODO: доделать(зачёркнуто) сделать поочерёдную подгрузку или удлаить
+	private void loadSceneFiles(String imageScenePath, String musicScenePath) { //TODO: доделать(зачёркнуто) сделать поочерёдную подгрузку или удлаить (склоняюсь к удалению)
 			imageScene = new File(imageScenePath);
 			musicScene = new File(musicScenePath);
 	}
@@ -73,7 +80,32 @@ public class SceneClass {
 //		});
 //
 //	}
+	public void changeFont(File fontFile, String type) {
+		int size = 0;
+		switch (type) {
+			case "header":
+				size = 48;
+				break;
+			case "text":
+				size = 20;
+				break;
+			case "info":
+				size = 30;
+				break;
 
+			default:
+				size = 40;
+				break;
+		}
+
+		try {
+			customFont = Font.createFont(Font.TRUETYPE_FONT, fontFile).deriveFont(60f);
+			GraphicsEnvironment fontGE = GraphicsEnvironment.getLocalGraphicsEnvironment();
+			fontGE.registerFont(customFont);
+		} catch (IOException | FontFormatException e) {
+			e.printStackTrace();
+		}
+	}
 	private void createSound() {
 		InputStream inputStream = getClass().getClassLoader().getResourceAsStream("assets/music/ntpp.wav");
 		try {
@@ -109,7 +141,7 @@ public class SceneClass {
                 System.out.println("Mouse Exited");
 			}
 			@Override
-			public void mousePressed(MouseEvent arg0) { //TODO пофиксить
+			public void mousePressed(MouseEvent arg0) { //TODO: пофиксить
 			    if(player.isPlaying){
 			        player.stopSound();
 			        player.setFramePosition(0);
@@ -122,7 +154,7 @@ public class SceneClass {
 			}
 			@Override
 			public void mouseReleased(MouseEvent arg0) {
-                //TODO удалить
+                //TODO: удалить
 			}
 			}
 		);
@@ -135,12 +167,15 @@ public class SceneClass {
 		ImageIcon sceneBackground = new ImageIcon(imageScenePath.getAbsolutePath());
 		background = new JLabel(sceneBackground); // Создание панели(обоев), которая ставится на фон
 		background.setLayout(new FlowLayout());
-		jbutton = new JLabel("<html><h1 color=red>New Game<h1></html>");
-		jbutton.setIcon(new ImageIcon("/home/rob/Desktop/CBEVN/src/main/resources/icon.png"));
-		JLabel jbutton2 = new JLabel("<html><h1 color=whiteResume</h1></html>");
+		jbutton = new JLabel();
+		if (isCustomFont()) {
+			jbutton.setFont(customFont);
+		}
+		jbutton.setText("New Game");
+		System.out.println(customFont.getSize());
+		System.out.println(isCustomFont());
 		setJButtonMouseSoundListener(jbutton);
 		background.add(jbutton);
-		background.add(jbutton2);
 		jframe.setContentPane(background);
 	}
 }

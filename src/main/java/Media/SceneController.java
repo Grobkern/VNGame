@@ -1,3 +1,4 @@
+package Media;
 import javax.swing.*;
 
 public class SceneController {

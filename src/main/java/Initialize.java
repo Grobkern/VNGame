@@ -1,26 +1,25 @@
+import Media.SceneClass;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
 
+
 public class Initialize {
+	//TODO: Пофиксить выключение программы, она остаётся в памяти после завершения основноо процесса, хотя я пикрываю все потоки(мне так кажется)
 	/**
 	 * Главный класс, в котором происходит инициализация, и запуск основных методов
 	 * */
 	static JFrame jframe = null;
 	static SceneClass currentScene = null;
 	static ImageIcon imageIcon = null;
-//	static InputStream inputStream = null;
 	static File imageScene = null;
 	static URL iconURL = null;
 
-
 	private static Dimension getWindowSize() { //Получить стандартный размер окна в соотношении 16:9, чтобы изображения выглядели нормально
-		//TODO: пофиксить метод(Почему-то не рабоатет?!?!?!)
 		int windowWidth = 1920;
 		int windowHeight = 1080;
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -55,6 +54,8 @@ public class Initialize {
 		setupJFrame();
 		currentScene = new SceneClass((jframe != null) ? jframe : new JFrame("CBEVN"));
 		imageScene = new File(Initialize.class.getResource("/assets/pictures/cb2.jpg").getFile());
+		File fontFile = new File(Initialize.class.getResource("/assets/fonts/OS.ttf").getFile());
+		currentScene.changeFont(fontFile,"header");
 		System.out.println(imageScene.getName());
 		currentScene.loadScene(imageScene);//TODO: Переделать нормально, путём переписывания конструктора класса SceneClass(выглядит позорно)
 		iconURL = Initialize.class.getResource("/assets/pictures/icon.png");
