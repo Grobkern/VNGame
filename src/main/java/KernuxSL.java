@@ -9,16 +9,17 @@ public class KernuxSL {
      */
     //TODO: Сделать внутреигровую консоль, с вызовами функций из вложенных файлов
     private File readeableFile = null;
-    private Map<String, Integer> intVariableList = new HashMap<String,Integer>();
-    private Map<String, Integer> floatVariableList = new HashMap<String,Integer>();
-    private Map<String, String> stringVariableList = new HashMap<String,String>();
+    private Map<String, Integer> intVariableList = new HashMap<>();
+    private Map<String, Integer> floatVariableList = new HashMap<>();
+    private Map<String, String> stringVariableList = new HashMap<>();
     int errorCode = 100;
+
     public KernuxSL(File readeableFile) {
         this.readeableFile = readeableFile;
     }
 
     private static boolean isKernFile(File kernFile) {
-        return getExtension(kernFile) == "kernux";
+        return getExtension(kernFile).equals("kernux");
     }
 
     public static String getExtension(File fileName) {
@@ -50,11 +51,10 @@ public class KernuxSL {
 
     private void parseStringVar(String[] splittedString, String type) { // Метод для парсинга строки содержащей переменную со строковым типом данных(тавтология?)
         int splitCounter = 0;
-        int value = 0;
-        boolean canConvertInt = false;
+        int value;
         boolean isVar = false;
         for (int i = 0; i < splittedString.length; i++) {
-            if (splittedString[i] == type) {
+            if (splittedString[i].equals(type)) {
                 splitCounter = i;
             }
             try {
@@ -72,35 +72,27 @@ public class KernuxSL {
         }
     }
 
-    private void parseFunc(String[] SplittedString) { // Идея неплохая, но функция предпологоает многострочный характер(необязательно, но у меня же интерпретатор, так что многострочный характер(нашёл ещё одну недоработку//TODO: Приудмать как нормально организовать логику работы интерпретатора
-        boolean isRight = false;
+    private void parseFunc(String[] SplittedString) { // Идея неплохая, но функция предпологоает многострочный характер(необязательно, но у меня же интерпретатор, так что многострочный характер(нашёл ещё одну недоработку
+        // TODO: Приудмать как нормально организовать логику работы интерпретатора
 
     }
 
 
     private void parseStringFirstIt(String kernString) { // Метод для парсинга строки, полученной из файла(поиск переменных)
-        boolean isRight = false;
         String fileName = readeableFile.getName();
-        File cache = new File(getName(readeableFile)+".json");
+        File cache = new File(fileName+".json"); //TODO: Релизовать кеширование(Мне кажется немного рановато для этого)
         String[] splitedCode = kernString.split(" ");
-        int resultCode = 0;
-        for(int i = 0; i < splitedCode.length; i++) {
-            switch (splitedCode[i]) {
+        for (String s : splitedCode) {
+            switch (s) {
                 case "int":
-                    isRight = true;
-                    parseStringVar(splitedCode,"int");
+                    parseStringVar(splitedCode, "int");
                     break;
                 case "float":
-                    isRight = true;
-                    parseStringVar(splitedCode,"float");
+                    parseStringVar(splitedCode, "float");
                     break;
                 case "{":
-                    isRight = true;
                     parseFunc(splitedCode);
             }
-        }
-        if(!isRight) {
-            resultCode = 0;
         }
     }
 

@@ -21,12 +21,12 @@ public class Sound {
 	boolean isCreated = false; // Не самая важная переменная, но я же пишу на жабе, так что наплевать, ХА!
 	private File file = new File("test.wav");
 	private Clip clip = null;
-
-	public Sound(InputStream musicPath) {
+	AudioInputStream ais;
+	Sound(InputStream musicPath) {
 		this.musicPath = musicPath;
 	}
 
-	public void createSound() {
+	void createSound() {
 		isCreated = true;
 		try {
 			file = copyInputStreamToFile(musicPath);
@@ -35,7 +35,7 @@ public class Sound {
 		}
 		isPlaying = false; // Почему?
 		try {
-			AudioInputStream ais = AudioSystem.getAudioInputStream(file);
+			ais = AudioSystem.getAudioInputStream(file);
 			clip = AudioSystem.getClip();
 			clip.open(ais);
 			clip.setFramePosition(0);
@@ -44,24 +44,30 @@ public class Sound {
 		}
 	}
 	
-	public void playSound() { // Начать воспроизведение
+	void playSound() { // Начать воспроизведение
 		isPlaying = true;
 		clip.start();
+
 	}
 	
-	public void stopSound() { // Пауза
+	void stopSound() { // Пауза
 		isPlaying = false;
 		clip.stop();
 	}
 	
-	public void closeSound() { // Остановить поток звука
+	void closeSound() { // Остановить поток звука
 		isCreated = false;
 		isPlaying = false;
 		this.stopSound();
 		clip.close();
+		try {
+			ais.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
-	public void setFramePosition(int framePosition) { // Начать воспроизведение с конкретной точки
+	void setFramePosition(int framePosition) { // Начать воспроизведение с конкретной точки
 		clip.setFramePosition(framePosition);
 	}
 	
@@ -79,10 +85,10 @@ public class Sound {
 	}
 	}
 
-	public File copyInputStreamToFile(InputStream inputStream) throws IOException { // Метод отвечающий за запись InputStream в File. Публичный, так как используется не только здесь
+	private  File copyInputStreamToFile(InputStream inputStream) throws IOException { // Метод отвечающий за запись InputStream в File. Публичный, так как используется не только здесь
 		//TODO: можно переписать, а то выглядит как костыль какой-то
 		File file = new File("test.kern");
-		try (FileOutputStream outputStream = new FileOutputStream(file)) {
+		try (var outputStream = new FileOutputStream(file)) {
 			int read;
 			byte[] bytes = new byte[1024];
 			while ((read = inputStream.read(bytes)) != -1) {

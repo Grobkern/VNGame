@@ -1,5 +1,5 @@
 import Media.SceneClass;
-
+import CustomPanels.ImageJPanel;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
@@ -9,15 +9,15 @@ import java.net.URL;
 
 
 public class Initialize {
-	//TODO: Пофиксить выключение программы, она остаётся в памяти после завершения основноо процесса, хотя я пикрываю все потоки(мне так кажется)
+	//TODO: Пофиксить выключение программы, она остаётся в памяти после завершения основного процесса, хотя я закрываю все потоки(мне так кажется)
 	/**
 	 * Главный класс, в котором происходит инициализация, и запуск основных методов
 	 * */
-	static JFrame jframe = null;
-	static SceneClass currentScene = null;
-	static ImageIcon imageIcon = null;
-	static File imageScene = null;
-	static URL iconURL = null;
+	private static JFrame jframe = null;
+	private static SceneClass currentScene = null;
+	private static ImageIcon imageIcon = null;
+	private static File imageScene = null;
+	private static URL iconURL = null;
 
 	private static Dimension getWindowSize() { //Получить стандартный размер окна в соотношении 16:9, чтобы изображения выглядели нормально
 		int windowWidth = 1920;
@@ -34,7 +34,7 @@ public class Initialize {
 			
 	}
 	
-	private static void setupJFrame(){
+	private static void setupJFrame() {
 		if(jframe != null) {
 			jframe.addWindowListener(new WindowAdapter() { // Event на уничтожение окна(закрытие)
 				@Override
@@ -54,10 +54,10 @@ public class Initialize {
 		setupJFrame();
 		currentScene = new SceneClass((jframe != null) ? jframe : new JFrame("CBEVN"));
 		imageScene = new File(Initialize.class.getResource("/assets/pictures/cb2.jpg").getFile());
-		File fontFile = new File(Initialize.class.getResource("/assets/fonts/OS.ttf").getFile());
+		var fontFile = new File(Initialize.class.getResource("/assets/fonts/OS.ttf").getFile());
 		currentScene.changeFont(fontFile,"header");
 		System.out.println(imageScene.getName());
-		currentScene.loadScene(imageScene);//TODO: Переделать нормально, путём переписывания конструктора класса SceneClass(выглядит позорно)
+		currentScene.loadScene(imageScene);
 		iconURL = Initialize.class.getResource("/assets/pictures/icon.png");
 		imageIcon = new ImageIcon(iconURL);
 		jframe.setIconImage(imageIcon.getImage());
